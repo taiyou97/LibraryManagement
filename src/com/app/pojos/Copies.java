@@ -1,5 +1,8 @@
 package com.app.pojos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,6 +11,7 @@ public class Copies {
 	private int rack;
 	private boolean status;
 	private Books bookid;
+	private List<IssueRecord> issueRecords = new ArrayList<IssueRecord>();
 	
 	public Copies() {
 		// TODO Auto-generated constructor stub
@@ -54,6 +58,25 @@ public class Copies {
 
 	public void setBookid(Books bookid) {
 		this.bookid = bookid;
+	}
+
+	@OneToMany(mappedBy = "copyId", cascade = CascadeType.ALL, orphanRemoval = true)
+	public List<IssueRecord> getIssueRecords() {
+		return issueRecords;
+	}
+
+	public void setIssueRecords(List<IssueRecord> issueRecords) {
+		this.issueRecords = issueRecords;
+	}
+	
+	public void addIssueRecords(IssueRecord record) {
+		issueRecords.add(record);
+		record.setCopyId(this);
+	}
+	
+	public void removeIssueRecords(IssueRecord record) {
+		issueRecords.remove(record);
+		record.setCopyId(null);
 	}
 
 	@Override

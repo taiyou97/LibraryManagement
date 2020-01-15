@@ -62,6 +62,7 @@ public class Payments {
 	}
 
 	@Enumerated(EnumType.STRING)
+	@Column(length = 10)
 	public PaymentsType getType() {
 		return type;
 	}
