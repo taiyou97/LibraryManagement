@@ -13,6 +13,11 @@ public class Copies {
 	private Books bookid;
 	private List<IssueRecord> issueRecords = new ArrayList<IssueRecord>();
 	
+	//INSERT INTO Copies (rack, status, book_Id) VALUES (1, true, 1);
+	//INSERT INTO Copies (rack, status, book_Id) VALUES (2, true, 2);
+	//INSERT INTO Copies (rack, status, book_Id) VALUES (1, true, 1);
+	//INSERT INTO Copies (rack, status, book_Id) VALUES (1, true, 2);
+	
 	public Copies() {
 		// TODO Auto-generated constructor stub
 		System.out.println("Copies()");

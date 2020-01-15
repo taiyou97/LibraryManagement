@@ -15,6 +15,10 @@ public class Users {
 	private List<Payments> payments = new ArrayList<Payments>();
 	private List<IssueRecord> issueRecords = new ArrayList<IssueRecord>();
 	
+	//INSERT INTO Users (email, name, passwd, phone, role) VALUES ("Shweta@gmail.com", "Shweta Sah", 1234, 8223087766, "OWNER");
+	//INSERT INTO Users (email, name, passwd, phone, role) VALUES ("Praveen@gmail.com", "Praveen Shah", 1234, 7587042615, "USER");
+	//INSERT INTO Users (email, name, passwd, phone, role) VALUES ("Aman@gmail.com", "Aman Singh", 1234, 7974458776, "LIBRARIAN");
+	
 	public Users() {
 		// TODO Auto-generated constructor stub
 		System.out.println("Users()");

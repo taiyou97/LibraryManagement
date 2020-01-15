@@ -1,7 +1,7 @@
 package com.app.pojos;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Payments {
 	private Integer id;
 	private float amount;
-	private LocalTime transaction_time;
+	private LocalDateTime transaction_time;
 	private LocalDate nextpayment_duedate;
 	private PaymentsType type;
 	private Users userId;
@@ -19,7 +19,7 @@ public class Payments {
 		System.out.println("Payments()");
 	}
 	
-	public Payments(float amount, LocalTime transaction_time, LocalDate nextpayment_duedate, PaymentsType type) {
+	public Payments(float amount, LocalDateTime transaction_time, LocalDate nextpayment_duedate, PaymentsType type) {
 		super();
 		this.amount = amount;
 		this.transaction_time = transaction_time;
@@ -45,11 +45,11 @@ public class Payments {
 		this.amount = amount;
 	}
 
-	public LocalTime getTransaction_time() {
+	public LocalDateTime getTransaction_time() {
 		return transaction_time;
 	}
 
-	public void setTransaction_time(LocalTime transaction_time) {
+	public void setTransaction_time(LocalDateTime transaction_time) {
 		this.transaction_time = transaction_time;
 	}
 

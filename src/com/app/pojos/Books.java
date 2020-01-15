@@ -12,7 +12,10 @@ public class Books {
 	private float price;
 	private Long isbn;
 	private List<Copies> copies = new ArrayList<Copies>();
-
+	
+	//INSERT INTO Books (name, author, subject, price, isbn) VALUES ("C++", "Bjarne Stroustrup", "C++", 500, 4556652315123);
+	//INSERT INTO Books (name, author, subject, price, isbn) VALUES ("C++", "Bjarne S", "C++", 400, 4554642315123);
+	
 	public Books() {
 		// TODO Auto-generated constructor stub
 		System.out.println("Books()");
